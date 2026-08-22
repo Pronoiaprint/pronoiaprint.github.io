@@ -1,2 +1,6 @@
 :HL["/_next/static/css/8b2d73fbb37517f7.css","style"]
+<<<<<<< HEAD
 0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"VMaxWe_KvbLvntskZbN4Q"}
+=======
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"zin8RRN40B5ZRIdBNclTL"}
+>>>>>>> 3f18ee5 (Finalize Cloudflare production metadata and copy)

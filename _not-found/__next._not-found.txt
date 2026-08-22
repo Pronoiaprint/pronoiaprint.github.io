@@ -2,4 +2,8 @@
 2:I[5343,[],""]
 3:I[483,[],""]
 4:[]
+<<<<<<< HEAD
 0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"VMaxWe_KvbLvntskZbN4Q"}
+=======
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"zin8RRN40B5ZRIdBNclTL"}
+>>>>>>> 3f18ee5 (Finalize Cloudflare production metadata and copy)

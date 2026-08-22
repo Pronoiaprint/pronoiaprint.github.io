@@ -2,4 +2,8 @@
 2:I[5343,[],""]
 3:I[483,[],""]
 :HL["/_next/static/css/8b2d73fbb37517f7.css","style"]
+<<<<<<< HEAD
 0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8b2d73fbb37517f7.css","precedence":"next"}]],["$","html",null,{"lang":"es-AR","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"VMaxWe_KvbLvntskZbN4Q"}
+=======
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8b2d73fbb37517f7.css","precedence":"next"}]],["$","html",null,{"lang":"es-AR","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"zin8RRN40B5ZRIdBNclTL"}
+>>>>>>> 3f18ee5 (Finalize Cloudflare production metadata and copy)
