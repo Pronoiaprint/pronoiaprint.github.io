@@ -144,7 +144,14 @@ create policy "admin manage settings" on public.site_settings for all to authent
 
 drop policy if exists "public submit quote" on public.quote_requests;
 create policy "public submit quote" on public.quote_requests for insert to anon with check (
-  status = 'pendiente' and privacy_consent = true and privacy_consent_at is not null
+  status = 'pendiente'
+  and privacy_consent = true
+  and privacy_consent_at is not null
+  and exists (
+    select 1 from public.site_settings
+    where key = 'privacy'
+      and coalesce((value->>'data_collection_enabled')::boolean, false) = true
+  )
 );
 drop policy if exists "admin manage quotes" on public.quote_requests;
 create policy "admin manage quotes" on public.quote_requests for all to authenticated using (true) with check (true);
@@ -166,7 +173,14 @@ drop policy if exists "admin delete gallery files" on storage.objects;
 create policy "admin delete gallery files" on storage.objects for delete to authenticated using (bucket_id = 'gallery');
 
 drop policy if exists "public upload customer designs" on storage.objects;
-create policy "public upload customer designs" on storage.objects for insert to anon with check (bucket_id = 'customer-designs');
+create policy "public upload customer designs" on storage.objects for insert to anon with check (
+  bucket_id = 'customer-designs'
+  and exists (
+    select 1 from public.site_settings
+    where key = 'privacy'
+      and coalesce((value->>'data_collection_enabled')::boolean, false) = true
+  )
+);
 drop policy if exists "admin read customer designs" on storage.objects;
 create policy "admin read customer designs" on storage.objects for select to authenticated using (bucket_id = 'customer-designs');
 drop policy if exists "admin delete customer designs" on storage.objects;
@@ -192,5 +206,6 @@ on conflict do nothing;
 insert into public.site_settings (key, value)
 values
   ('contact', '{"whatsapp":"5491135190032","instagram":"pronoia.print"}'::jsonb),
+  ('privacy', '{"data_collection_enabled":false,"business_name":"","privacy_email":"","privacy_notice_url":""}'::jsonb),
   ('business', '{"headline":"Tu marca también se puede vestir.","description":"Indumentaria para empresas, emprendimientos, eventos, restaurantes, comercios, equipos y creadores de contenido."}'::jsonb)
 on conflict (key) do nothing;
