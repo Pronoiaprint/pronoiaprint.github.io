@@ -191,6 +191,6 @@ on conflict do nothing;
 
 insert into public.site_settings (key, value)
 values
-  ('contact', '{"whatsapp":"5491133132418","instagram":"pronoia.print"}'::jsonb),
+  ('contact', '{"whatsapp":"5491135190032","instagram":"pronoia.print"}'::jsonb),
   ('business', '{"headline":"Tu marca también se puede vestir.","description":"Indumentaria para empresas, emprendimientos, eventos, restaurantes, comercios, equipos y creadores de contenido."}'::jsonb)
 on conflict (key) do nothing;
